@@ -1,0 +1,5 @@
+package com.fourkites.configmanagement.repositories;
+
+public class ConfigRepository {
+
+}

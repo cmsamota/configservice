@@ -1,0 +1,23 @@
+package com.fourkites.configmanagement;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ApplicationContext;
+
+import com.fourkites.configmanagement.repositories.ConfigRepository;
+
+@SpringBootApplication
+public class ConfigurationManagementServiceApplication {
+
+	public static void main(String[] args) {
+		ApplicationContext context = SpringApplication.run(ConfigurationManagementServiceApplication.class, args);
+		ConfigRepository configRepository = context.getBean(ConfigRepository.class);
+		
+//		ConfigStatus configStatus = new ConfigStatus();
+//		configStatus.setStatus(0);
+//		configStatus.setDeployedBy("CM");
+//		configStatus.setDeployedAt(new Date());
+//		configRepository.save(configStatus);
+	}
+
+}

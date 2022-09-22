@@ -1,0 +1,55 @@
+package com.fourkites.configmanagement.entities;
+
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class ConfigStatus {
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int id;
+	private int status;
+	private String deployedBy;
+	
+	public ConfigStatus() {
+		super();
+	}
+	
+	public ConfigStatus(int id, int status, String deployedBy, Date deployedAt) {
+		super();
+		this.id = id;
+		this.status = status;
+		this.deployedBy = deployedBy;
+		this.deployedAt = deployedAt;
+	}
+
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public int getStatus() {
+		return status;
+	}
+	public void setStatus(int status) {
+		this.status = status;
+	}
+	public String getDeployedBy() {
+		return deployedBy;
+	}
+	public void setDeployedBy(String deployedBy) {
+		this.deployedBy = deployedBy;
+	}
+	public Date getDeployedAt() {
+		return deployedAt;
+	}
+	public void setDeployedAt(Date deployedAt) {
+		this.deployedAt = deployedAt;
+	}
+	private Date deployedAt;
+}

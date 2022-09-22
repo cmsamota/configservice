@@ -1,0 +1,8 @@
+package com.fourkites.configmanagement.repositories;
+import org.springframework.data.repository.CrudRepository;
+
+import com.fourkites.configmanagement.entities.ConfigStatus;
+
+public interface ConfigRepositor1y extends CrudRepository<ConfigStatus, Integer> {
+
+}
